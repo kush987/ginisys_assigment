@@ -8,7 +8,7 @@ const options = {
     info: {
       title: 'Pet API',
       version: '1.0.0',
-      description: 'API for Pet'
+      description: 'Pet Api use -> access token for authoize pet apis'
     },
     servers: [
       {
