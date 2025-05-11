@@ -19,7 +19,7 @@ const authenticate = require('../middlewares/authHandler');
  * @swagger
  * /api/pets/create:
  *   post:
- *     summary: Create a Pet
+ *     summary: Create a Dog
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -49,7 +49,7 @@ router.post('/create', authenticate, validate(petSchema), petController.createPe
  * @swagger
  * /api/pets/{id}/upload:
  *   post:
- *     summary: Upload and Update a Pet image
+ *     summary: Upload and Update a Dog image
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -80,7 +80,7 @@ router.post('/:id/upload', authenticate, petController.uploadPetImage);
  * @swagger
  * /api/pets:
  *   get:
- *     summary: Get list of Pets
+ *     summary: Get list of Dogs images
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -107,7 +107,7 @@ router.get('/', authenticate, petController.getAllPets);
  * @swagger
  * /api/pets/{id}:
  *   get:
- *     summary: Get a Pet image by ID
+ *     summary: Get a Dog image by ID
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -129,7 +129,7 @@ router.get('/:id', authenticate, petController.getPet);
  * @swagger
  * /api/pets/{id}:
  *   put:
- *     summary: Update a Pet name and breed
+ *     summary: Update a Dog name and breed
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -165,7 +165,7 @@ router.put('/:id', authenticate, validate(petSchema), petController.updatePet);
  * @swagger
  * /api/pets/{id}:
  *   delete:
- *     summary: Delete a Pet
+ *     summary: Delete a Dog
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
@@ -187,7 +187,7 @@ router.delete('/:id', authenticate, petController.deletePet);
  * @swagger
  * /api/pets/{id}/image:
  *   delete:
- *     summary: Delete a Pet Image
+ *     summary: Delete a Dog Image
  *     tags: [Pet]
  *     security:
  *       - bearerAuth: []
