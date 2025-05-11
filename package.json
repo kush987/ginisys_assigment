@@ -1,0 +1,37 @@
+{
+  "name": "ginisys",
+  "version": "1.0.0",
+  "description": "assigment-project",
+  "main": "server.js",
+  "scripts": {
+    "test-cover": "cross-env NODE_ENV=test jest --coverage",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:userService": "jest tests/controllers/userControllers.test.js",
+    "test:petService": "jest tests/controllers/petControllers.test.js",
+    "start": "node server.js"
+  },
+  "author": "kushal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.2",
+    "pg": "^8.15.6",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "sequelizer": "^1.1.4",
+    "sharp": "^0.34.1",
+    "sqlite3": "^5.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  }
+}

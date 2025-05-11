@@ -1,0 +1,53 @@
+# 🐾 Pet API Service
+
+A RESTful API for managing pets and users, powered by Node.js, Express, and PostgreSQL. Includes Docker support and Swagger documentation.
+
+---
+
+## 📦 Features
+
+- User and Pet management APIs
+- Secure authentication using JWT (Access & Refresh Tokens)
+- File uploads support
+- Environment-based configuration
+- Swagger UI for API documentation
+- Dockerized setup for development and production
+- Modular and tested service structure
+
+---
+
+## 🛠️ Local Development Setup
+
+### 1️⃣ Prerequisites
+
+- Node.js v21.x  
+- PostgreSQL (e.g., v13+)
+
+### 2️⃣ Installation
+- npm install
+
+
+3️⃣ Setup PostgreSQL Database
+# Create a new database (e.g., Dogs).
+
+# Create a .env file in the root of your project:
+PORT=4000
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=Pets
+DB_USER=your_postgres_user
+DB_PASS=your_postgres_password
+
+ACCESS_TOKEN_SECRET=yourAccessSecret
+REFRESH_TOKEN_SECRET=yourRefreshSecret
+
+4️⃣ Run the Application
+## -> "npm run start"
+
+5️⃣ Run Test Suites
+## -> npm run test:userService     # Test User Service
+## -> npm run test:petService 
+
+5️⃣ Run Docker App
+## -> docker compose -f docker-compose.yml up --build -d
